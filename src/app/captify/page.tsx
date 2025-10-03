@@ -152,10 +152,10 @@ export default function InspireSharePage() {
           </div>
         </div>
         <div className="hidden md:flex items-center space-x-6">
-          <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
+          {/* <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
           <a href="/tools" className="text-gray-300 hover:text-white transition-colors">Tools</a>
           <a href="#features" className="text-gray-300 hover:text-white transition-colors">Features</a>
-          <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
+          <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a> */}
           <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-colors">
             Get Started
           </button>
@@ -429,10 +429,10 @@ export default function InspireSharePage() {
               <span className="font-semibold">Inspire & Share</span>
             </div>
             <div className="flex space-x-6 text-gray-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy</a>
+              {/* <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>
               <a href="#" className="hover:text-white transition-colors">Support</a>
-              <a href="/tools" className="hover:text-white transition-colors">All Tools</a>
+              <a href="/tools" className="hover:text-white transition-colors">All Tools</a> */}
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-white/10 text-center text-gray-400">

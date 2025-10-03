@@ -1,4 +1,4 @@
-import { Shield, Smartphone, BarChart3, DollarSign, Lock, Users, Settings, Mail, Globe } from 'lucide-react';
+import { Shield, Smartphone, BarChart3, Lock, Users, Settings, Mail, Globe } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   const sections = [
@@ -85,7 +85,7 @@ export default function PrivacyPolicy() {
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-200">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Privacy Policy</h2>
           <p className="text-slate-600 mb-2">
-            <span className="font-semibold">Effective Date:</span> 03-10-2025
+            <span className="font-semibold">Effective Date:</span> [Insert Date]
           </p>
           <p className="text-slate-700 leading-relaxed">
             Captify ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application ("App").
@@ -104,11 +104,11 @@ export default function PrivacyPolicy() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-slate-900 mb-3">{section.title}</h3>
-                    
+
                     {section.text && (
                       <p className="text-slate-700 mb-3">{section.text}</p>
                     )}
-                    
+
                     {section.content && (
                       <div className="space-y-3 mb-3">
                         {section.content.map((item, i) => (
@@ -119,7 +119,7 @@ export default function PrivacyPolicy() {
                         ))}
                       </div>
                     )}
-                    
+
                     {section.list && (
                       <ul className="space-y-2 mb-3">
                         {section.list.map((item, i) => (
@@ -130,7 +130,7 @@ export default function PrivacyPolicy() {
                         ))}
                       </ul>
                     )}
-                    
+
                     {section.note && (
                       <div className="bg-indigo-50 border-l-4 border-indigo-600 p-3 rounded mt-3">
                         <p className="text-slate-800 font-medium">{section.note}</p>
@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5" />
-                <span className="font-medium">Website: tools.devcenter.in/captify</span>
+                <span className="font-medium">Website: tools.devcenter.in</span>
               </div>
             </div>
           </div>
