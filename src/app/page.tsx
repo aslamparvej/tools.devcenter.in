@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Sparkles, Quote, Share2, Zap, Globe, Code, Palette, ArrowUpRight, Menu, X } from 'lucide-react';
+import { ChevronRight, Sparkles, Zap, Globe, Code, Palette, ArrowUpRight, Menu, X } from 'lucide-react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);

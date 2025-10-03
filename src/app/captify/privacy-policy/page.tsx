@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5" />
-                <span className="font-medium">Website: <a href="https://tools.devcenter.in/captify" target="_blank" rel="noopener noreferrer">tools.devcenter.in/captify</a></span>
+                <span className="font-medium">Website: tools.devcenter.in/captify</span>
               </div>
             </div>
           </div>

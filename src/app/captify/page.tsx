@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from "next/image";
-import { Globe, Sparkles, Quote, Share2, Zap, Star, Users, CheckCircle, Play, ArrowRight, Smartphone, Brain, Target, Palette, Download, Copy, Heart, MessageSquare, Hash, Wand2, RefreshCw, Send } from 'lucide-react';
+import { Sparkles, Quote, Share2, Play, ArrowRight, Smartphone, Brain, Target, Palette, Copy,  Hash, Wand2, RefreshCw, Star } from 'lucide-react';
 
 export default function InspireSharePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -11,7 +11,7 @@ export default function InspireSharePage() {
   const [isGenerating, setIsGenerating] = useState(false);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
     window.addEventListener('mousemove', handleMouseMove);
