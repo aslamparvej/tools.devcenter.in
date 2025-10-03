@@ -85,10 +85,10 @@ export default function PrivacyPolicy() {
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-slate-200">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Privacy Policy</h2>
           <p className="text-slate-600 mb-2">
-            <span className="font-semibold">Effective Date:</span> [Insert Date]
+            <span className="font-semibold">Effective Date:</span> 03-10-2025
           </p>
           <p className="text-slate-700 leading-relaxed">
-            Captify ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application ("App").
+            Captify (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application (&quot;App&quot;).
           </p>
         </div>
 
@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
           <div className="bg-white rounded-xl shadow-md p-6 border border-slate-200">
             <h3 className="text-xl font-bold text-slate-900 mb-3">7. Changes to This Privacy Policy</h3>
             <p className="text-slate-700">
-              We may update this Privacy Policy from time to time. Updates will be posted here with a revised "Effective Date."
+              We may update this Privacy Policy from time to time. Updates will be posted here with a revised &quot;Effective Date.&quot;
             </p>
           </div>
 
