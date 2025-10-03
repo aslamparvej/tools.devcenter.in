@@ -6,9 +6,6 @@ import { Sparkles, Quote, Share2, Play, ArrowRight, Smartphone, Brain, Target, P
 
 export default function InspireSharePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [activeTab, setActiveTab] = useState('captions');
-  const [generatedContent, setGeneratedContent] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -57,31 +54,6 @@ export default function InspireSharePage() {
     }
   ];
 
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Content Creator",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face",
-      content: "Inspire & Share has transformed my content creation process. I save hours every week and my engagement has increased by 40%!",
-      rating: 5
-    },
-    {
-      name: "Mike Chen",
-      role: "Social Media Manager",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      content: "The AI-generated captions are incredibly creative and always on-brand. This tool is a game-changer for our social media strategy.",
-      rating: 5
-    },
-    {
-      name: "Emma Rodriguez",
-      role: "Influencer",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      content: "I love how easy it is to generate quotes that resonate with my audience. The mobile app is perfect for creating content on the go.",
-      rating: 5
-    }
-  ];
-
   const demoContent = {
     captions: [
       "✨ Turning dreams into reality, one step at a time. What's your next big move? #DreamBig #Motivation #Success",
@@ -93,20 +65,6 @@ export default function InspireSharePage() {
       "\"The future belongs to those who believe in the beauty of their dreams.\" - Eleanor Roosevelt",
       "\"Don't watch the clock; do what it does. Keep going.\" - Sam Levenson"
     ]
-  };
-
-  const handleGenerate = () => {
-    setIsGenerating(true);
-    setTimeout(() => {
-      const content = activeTab === 'captions' ? demoContent.captions : demoContent.quotes;
-      const randomContent = content[Math.floor(Math.random() * content.length)];
-      setGeneratedContent(randomContent);
-      setIsGenerating(false);
-    }, 2000);
-  };
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(generatedContent);
   };
 
   return (
@@ -223,86 +181,6 @@ export default function InspireSharePage() {
             {/* Demo Interface */}
             <div className="relative">
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8">
-                <div className="flex space-x-4 mb-6">
-                  <button
-                    onClick={() => setActiveTab('captions')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${activeTab === 'captions'
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                      }`}
-                  >
-                    Captions
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('quotes')}
-                    className={`px-4 py-2 rounded-lg font-medium transition-all ${activeTab === 'quotes'
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                      }`}
-                  >
-                    Quotes
-                  </button>
-                </div>
-
-                <div className="mb-6">
-                  <label className="block text-sm font-medium mb-2 text-gray-300">
-                    {activeTab === 'captions' ? 'Caption Style' : 'Quote Category'}
-                  </label>
-                  <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-purple-500 transition-colors">
-                    {activeTab === 'captions' ? (
-                      <>
-                        <option value="motivational">Motivational</option>
-                        <option value="casual">Casual</option>
-                        <option value="professional">Professional</option>
-                      </>
-                    ) : (
-                      <>
-                        <option value="inspiration">Inspiration</option>
-                        <option value="success">Success</option>
-                        <option value="life">Life Wisdom</option>
-                      </>
-                    )}
-                  </select>
-                </div>
-
-                <button
-                  onClick={handleGenerate}
-                  disabled={isGenerating}
-                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center mb-6"
-                >
-                  {isGenerating ? (
-                    <>
-                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
-                      Generating...
-                    </>
-                  ) : (
-                    <>
-                      <Wand2 className="w-5 h-5 mr-2" />
-                      Generate {activeTab === 'captions' ? 'Caption' : 'Quote'}
-                    </>
-                  )}
-                </button>
-
-                {generatedContent && (
-                  <div className="bg-white/10 rounded-xl p-4 border border-white/20">
-                    <p className="text-gray-100 mb-4 leading-relaxed">
-                      {generatedContent}
-                    </p>
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={copyToClipboard}
-                        className="flex-1 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
-                      >
-                        <Copy className="w-4 h-4 mr-2" />
-                        Copy
-                      </button>
-                      <button className="flex-1 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center">
-                        <Share2 className="w-4 h-4 mr-2" />
-                        Share
-                      </button>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           </div>
@@ -345,52 +223,6 @@ export default function InspireSharePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="relative z-10 px-6 lg:px-8 py-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Loved by Creators
-              </span>
-            </h2>
-            <p className="text-lg text-gray-400">
-              See what our users are saying about Inspire & Share
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-white/20"
-                  />
-                  <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="relative z-10 px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -426,7 +258,7 @@ export default function InspireSharePage() {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="font-semibold">Inspire & Share</span>
+              <span className="font-semibold">Captify</span>
             </div>
             <div className="flex space-x-6 text-gray-400">
               {/* <a href="#" className="hover:text-white transition-colors">Privacy</a>
@@ -436,7 +268,7 @@ export default function InspireSharePage() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-white/10 text-center text-gray-400">
-            <p>&copy; 2025 Inspire & Share. Part of DevCenter Tools. All rights reserved.</p>
+            <p>&copy; 2025 Captify. Part of DevCenter Tools. All rights reserved.</p>
           </div>
         </div>
       </footer>

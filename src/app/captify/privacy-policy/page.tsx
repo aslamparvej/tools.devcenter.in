@@ -1,3 +1,6 @@
+"use client";
+
+import React from 'react';
 import { Shield, Smartphone, BarChart3, Lock, Users, Settings, Mail, Globe } from 'lucide-react';
 
 export default function PrivacyPolicy() {
