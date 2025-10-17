@@ -258,8 +258,8 @@ export default function CoinTrackLanding() {
                 <div>
                   <div className="font-semibold text-purple-300 mb-2">Real Example:</div>
                   <div className="text-slate-300 text-sm leading-relaxed">
-                    "I drink 5 coffees weekly @ ₹150 each = <span className="text-purple-400 font-bold">₹3,000/month</span>. 
-                    If I skip just 2 coffees/week, I&apos;ll save <span className="text-cyan-400 font-bold">₹14,400/year</span>!"
+                    &quot;I drink 5 coffees weekly @ ₹150 each = <span className="text-purple-400 font-bold">₹3,000/month</span>. 
+                    If I skip just 2 coffees/week, I&apos;ll save <span className="text-cyan-400 font-bold">₹14,400/year</span>!&quot;
                   </div>
                 </div>
               </div>
