@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { Coffee, TrendingDown, Sparkles, Zap, ArrowRight, Menu, X, Check, Bell, Shield, Smartphone, BarChart3, Brain, Users, Target, Calendar, DollarSign, PieChart, LineChart, Gift } from 'lucide-react';
+import { Coffee, TrendingDown, Sparkles, Zap, ArrowRight, Menu, X, Check, Bell, Shield, Smartphone, BarChart3, Brain, Users, Target, Calendar, DollarSign, Gift } from 'lucide-react';
 
 export default function CoinTrackLanding() {
   const [scrollY, setScrollY] = useState(0);
@@ -259,7 +259,7 @@ export default function CoinTrackLanding() {
                   <div className="font-semibold text-purple-300 mb-2">Real Example:</div>
                   <div className="text-slate-300 text-sm leading-relaxed">
                     "I drink 5 coffees weekly @ ₹150 each = <span className="text-purple-400 font-bold">₹3,000/month</span>. 
-                    If I skip just 2 coffees/week, I'll save <span className="text-cyan-400 font-bold">₹14,400/year</span>!"
+                    If I skip just 2 coffees/week, I&apos;ll save <span className="text-cyan-400 font-bold">₹14,400/year</span>!"
                   </div>
                 </div>
               </div>
@@ -301,7 +301,7 @@ export default function CoinTrackLanding() {
                   <div className="p-6">
                     <div className="flex justify-between items-center mb-6">
                       <div>
-                        <div className="text-sm text-slate-400">Today's Total</div>
+                        <div className="text-sm text-slate-400">Today&apos;s Total</div>
                         <div className="text-3xl font-bold">₹410</div>
                         <div className="text-xs text-green-400 flex items-center gap-1 mt-1">
                           <TrendingDown className="w-3 h-3" />
@@ -344,7 +344,7 @@ export default function CoinTrackLanding() {
                         <div className="text-sm">
                           <div className="font-semibold text-purple-300 mb-1">💡 AI Insight</div>
                           <div className="text-slate-300">
-                            You've had 4 coffees this week. Skip 3 next week and save <span className="text-cyan-400 font-bold">₹1,800/month</span>!
+                            You&apos;ve had 4 coffees this week. Skip 3 next week and save <span className="text-cyan-400 font-bold">₹1,800/month</span>!
                           </div>
                         </div>
                       </div>
@@ -576,8 +576,8 @@ export default function CoinTrackLanding() {
                     <Check className="w-4 h-4 text-pink-400" />
                   </div>
                   <div>
-                    <div className="font-semibold text-white mb-1">Exclusive Founder's Badge</div>
-                    <div className="text-sm text-slate-400">Show you're an original CoinTrack user</div>
+                    <div className="font-semibold text-white mb-1">Exclusive Founder&apos;s Badge</div>
+                    <div className="text-sm text-slate-400">Show you&apos;re an original CoinTrack user</div>
                   </div>
                 </div>
               </div>
@@ -599,9 +599,9 @@ export default function CoinTrackLanding() {
                   <div className="w-20 h-20 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
                     <Check className="w-10 h-10 text-green-400" />
                   </div>
-                  <h3 className="text-3xl font-bold mb-4">You're In! 🎉</h3>
+                  <h3 className="text-3xl font-bold mb-4">You&apos;re In! 🎉</h3>
                   <p className="text-slate-300 mb-6">
-                    Welcome to the CoinTrack family! We've sent a confirmation email to <span className="font-semibold text-purple-400">{formData.email}</span>
+                    Welcome to the CoinTrack family! We&apos;ve sent a confirmation email to <span className="font-semibold text-purple-400">{formData.email}</span>
                   </p>
                   <div className="space-y-3 text-left bg-slate-900/50 rounded-2xl p-6">
                     <div className="flex items-center gap-3">
@@ -614,7 +614,7 @@ export default function CoinTrackLanding() {
                       <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
                         <span className="text-sm font-bold">2</span>
                       </div>
-                      <span className="text-sm text-slate-300">We'll notify you 48 hours before launch</span>
+                      <span className="text-sm text-slate-300">We&apos;ll notify you 48 hours before launch</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center">
@@ -784,7 +784,7 @@ export default function CoinTrackLanding() {
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
           
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Don't Miss Out on Early Access!</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Don&apos;t Miss Out on Early Access!</h2>
             <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
               Join 50,000+ smart savers who are already on the waitlist. Launch in 45 days!
             </p>

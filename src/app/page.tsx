@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Sparkles, Zap, Globe, Code, Palette, ArrowUpRight, Menu, X } from 'lucide-react';
+import { ChevronRight, Sparkles, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 import Tools from './components/root/Tools';

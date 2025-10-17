@@ -106,7 +106,7 @@ export default function Contact() {
             </span>
           </div>
           <h1 className="text-5xl font-bold text-white mb-4">
-            Let's Build Something
+            Let&apos;s Build Something
             <span className="block mt-2 bg-gradient-to-r from-[#EEB30D] to-[#A57B08] bg-clip-text text-transparent">
               Amazing Together
             </span>
@@ -215,7 +215,7 @@ export default function Contact() {
             {/* Status Messages */}
             {submitStatus === 'success' && (
               <div className="p-4 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 text-center">
-                ✓ Message sent successfully! We'll get back to you soon.
+                ✓ Message sent successfully! We&apos;ll get back to you soon.
               </div>
             )}
             {submitStatus === 'error' && (

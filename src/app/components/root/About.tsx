@@ -1,6 +1,6 @@
 'use clent';
 
-import React, { useState } from 'react';
+import React from 'react';
 
 
 interface Stat {
@@ -110,7 +110,7 @@ const About = () => {
                                 problem, allowing you to focus on creativity and innovation.
                             </p>
                             <p>
-                                Today, we're proud to serve over 100,000 developers worldwide, helping them build
+                                Today, we&apos;re proud to serve over 100,000 developers worldwide, helping them build
                                 faster, ship smarter, and scale with confidence.
                             </p>
                         </div>
