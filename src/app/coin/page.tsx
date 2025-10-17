@@ -519,7 +519,7 @@ export default function CoinTrackLanding() {
                   <div className="text-sm text-slate-400">{testimonial.role}</div>
                 </div>
               </div>
-              <p className="text-slate-300 mb-6 italic">"{testimonial.text}"</p>
+              <p className="text-slate-300 mb-6 italic">&quot;{testimonial.text}&quot;</p>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/20 border border-green-500/30">
                 <DollarSign className="w-4 h-4 text-green-400" />
                 <span className="text-sm font-semibold text-green-400">Saved {testimonial.savings}</span>
