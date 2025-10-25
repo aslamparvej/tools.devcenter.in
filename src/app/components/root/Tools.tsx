@@ -1,9 +1,22 @@
 import React from 'react';
 import { Sparkles, Zap, Code, Palette, ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
+
+interface Tool {
+    name: string;
+    slug: string;
+    url?: string;
+    description: string;
+    icon: React.ReactElement<React.SVGProps<SVGSVGElement> & { className?: string }>;
+    gradient: string;
+    features: string[];
+    status: 'Live' | 'Beta' | 'Coming Soon';
+    onclickUrl: string;
+}
 
 const Tools = () => {
 
-    const tools = [
+    const tools: Tool[] = [
         {
             name: "Captify",
             slug: "captify",
@@ -11,7 +24,8 @@ const Tools = () => {
             icon: <Sparkles className="w-8 h-8" />,
             gradient: "from-purple-500 via-pink-500 to-red-500",
             features: ["AI Caption Generator", "Quote Creation", "Social Media Ready", "Mobile Optimized"],
-            status: "Live"
+            status: "Live",
+            onclickUrl: `${process.env.NEXT_PUBLIC_DOMAIN}/captify`,
         },
         {
             name: "Dev Center",
@@ -21,7 +35,8 @@ const Tools = () => {
             icon: <Code className="w-8 h-8" />,
             gradient: "from-yellow-500 via-white-500 to-yellow-700",
             features: ["Developer-Focused Content", "Hands-on Tutorials", "Tech Insights & Trends", "Modern Web & Mobile Topics"],
-            status: "Live"
+            status: "Live",
+            onclickUrl: "https://www.devcenter.in/",
         },
         {
             name: "Code Snippet Manager",
@@ -30,7 +45,8 @@ const Tools = () => {
             icon: <Code className="w-8 h-8" />,
             gradient: "from-blue-500 via-cyan-500 to-teal-500",
             features: ["Multi-language Support", "Syntax Highlighting", "Team Sharing", "Search & Filter"],
-            status: "Beta"
+            status: "Coming Soon",
+            onclickUrl: `${process.env.NEXT_PUBLIC_DOMAIN}/code-snippets`,
         },
         {
             name: "Color Palette Pro",
@@ -39,7 +55,8 @@ const Tools = () => {
             icon: <Palette className="w-8 h-8" />,
             gradient: "from-orange-500 via-rose-500 to-pink-500",
             features: ["Palette Generator", "Export Options", "Accessibility Check", "Color Harmony"],
-            status: "Coming Soon"
+            status: "Coming Soon",
+            onclickUrl: `${process.env.NEXT_PUBLIC_DOMAIN}/color-palette`,
         },
         {
             name: "Quick Deploy",
@@ -48,13 +65,15 @@ const Tools = () => {
             icon: <Zap className="w-8 h-8" />,
             gradient: "from-green-500 via-emerald-500 to-cyan-500",
             features: ["One-click Deploy", "Multi-platform", "CI/CD Integration", "Real-time Logs"],
-            status: "Coming Soon"
+            status: "Coming Soon",
+            onclickUrl: `${process.env.NEXT_PUBLIC_DOMAIN}/quick-deploy`,
         }
     ];
 
-    const handleToolClick = (slug: string) => {
+    const handleToolClick = (url: string) => {
         // window.location.href = `http://localhost:3000/${slug}`;
-        window.location.href = `${process.env.DOMAIN}/${slug}`
+        // window.location.href = `${process.env.NEXT_PUBLIC_DOMAIN}/${slug}`;
+        window.open(url, '_blank');
     };
 
     return (
@@ -76,7 +95,7 @@ const Tools = () => {
                         <div
                             key={tool.slug}
                             className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 cursor-pointer transform hover:scale-[1.02]"
-                            onClick={() => handleToolClick(tool.slug)}
+                            onClick={() => handleToolClick(tool.onclickUrl)}
                             style={{
                                 animationDelay: `${index * 0.1}s`
                             }}
